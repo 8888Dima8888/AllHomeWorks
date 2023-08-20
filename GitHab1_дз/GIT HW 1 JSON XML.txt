@@ -1,0 +1,392 @@
+GIT Homework 1
+
+Для выполнения задания у вас должен быть установлен для Windows - GitBash.
+Создан аккаунт в GitHub
+
+Все шаги сценария выполняйте в терминале GitBush, Terminal, в папке под гитом.
+
+Как отправить ДЗ на проверку.
+ 1. Создайте текстоовый файл как в первом ДЗ по Terminal.
+ 2. Сценарий перенесите в этот файл.
+ 3. На против каждого действия - напишите команду в GitBash
+
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON.
+ ...
+ 5. Клонировать репозиторий JSON на локальный компьютер.
+ main@MacBook-Pro GitHab % cd /Users/main/QA36/GitHab
+main@MacBook-Pro GitHab % git clone https://github.com/8888Dima8888/JSON.git
+Cloning into 'JSON'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+main@MacBook-Pro GitHab % 
+
+ 6. Внутри локального JSON создать файл “new.json”.
+ main@MacBook-Pro GitHab % cd JSON
+main@MacBook-Pro JSON %
+main@MacBook-Pro JSON % cat > new.json
+^C
+main@MacBook-Pro JSON %  
+
+ 7. Добавить файл под гит.
+ main@MacBook-Pro JSON % git add new.json
+main@MacBook-Pro JSON % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   new.json
+
+main@MacBook-Pro JSON % 
+
+ 8. Закоммитить файл.
+ main@MacBook-Pro JSON % git commit -m "first commit"
+[main ebc9817] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.json
+main@MacBook-Pro JSON % 
+
+ 9. Отправить файл на внешний GitHub репозиторий.
+ main@MacBook-Pro JSON % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/JSON.git
+   e04f4ad..ebc9817  main -> main
+main@MacBook-Pro JSON % 
+
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+ main@MacBook-Pro JSON % vim new.json
+main@MacBook-Pro JSON % cat new.json
+{"ФИО":"Иванов Иван Иванович",
+ "Возраст":32,
+ "Количество домашних животных":0,
+  "Будущая желаемая зарплата":"Камни бесконечности"
+} 
+main@MacBook-Pro JSON % 
+
+ 11. Отправить изменения на внешний репозиторий.
+main@MacBook-Pro JSON % git add new.json
+main@MacBook-Pro JSON % git commit -m "first json"
+[main f380410] first json
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+main@MacBook-Pro JSON % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 437 bytes | 437.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/JSON.git
+   bcb10dc..f380410  main -> main
+main@MacBook-Pro JSON % 
+
+ 12. Создать файл preferences.json
+ main@MacBook-Pro JSON % cat > preferences.json
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+ main@MacBook-Pro JSON % open preferences.json                                  
+main@MacBook-Pro JSON % cat preferences.json
+{"Любимый фильм": "Хранители",
+ "Любимый сериал": "Экспансия",
+ "Любимая еда": "Вкусная",
+ "Любимое время года": "Весь год",
+ "Страна которую хотели бы посетить": "Новая Зеландия"
+}
+main@MacBook-Pro JSON % 
+
+ 14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON 
+ main@MacBook-Pro JSON % cat > sklls.json
+ main@MacBook-Pro JSON % 
+main@MacBook-Pro JSON % open skills.json
+main@MacBook-Pro JSON % cat skills.json
+{ "skills"
+    [
+      "Базовая теория",
+     "Что такое клиент-серверная архитектура",
+     "HTTP Методы запросов на сервер",
+     "Коды ответов HTTP сервера",
+     "Структуры HTTP запросов и ответов",
+     "Что такое JSON, XML. Их структура",
+     "Тестирование API через Postman (JS, автотесты API)",
+     "Снятие и чтение логов c внешнего сервера",
+     "Снифинг http web трафика через Charles и Fiddler",
+     "Dev Tools веб браузеров (Google Chrome, FireFox)",
+     "VPN",
+     "Мобильное тестирование",
+     "Осость iOS, Android, гайдлайны",
+     "Сборка iOS приложений на XCode",
+     "Сборка Android приложений на Android Studio",
+     "ADB",
+     "Настройка прокси и vpn на iOS и Android",
+     "Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android",
+     "Командная строка (terminal) Linux (копирование, создание, просмотр перемещение файлов на серверах без графического интерфейса)",
+     "Основы bash скриптинг, автоматизация рутинных задач на сервере",
+     "Доступ к удалённым серверам",
+     "Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join)",
+     "База данных Postgres (установка, настройка и использование)",
+     "Нереляционная база данных Redis (установка, настройка и использование)",
+     "Нагрузочное тестирование в Jmeter",
+     "Методология разработки Scrum",
+     "Техники тест-дизайна",
+     "Python"
+    ]
+    
+}
+main@MacBook-Pro JSON % 
+
+
+ 15. Отправить сразу 2 файла на внешний репозиторий.
+ main@MacBook-Pro JSON % git add .
+main@MacBook-Pro JSON % git commit -m "preferences&&skills"
+[main 6c68ace] preferences&&skills
+ 3 files changed, 39 insertions(+)
+ create mode 100644 1new.txt
+ create mode 100644 preferences.json
+ create mode 100644 skills.json
+main@MacBook-Pro JSON % git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.43 KiB | 1.43 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/JSON.git
+   f380410..6c68ace  main -> main
+main@MacBook-Pro JSON % 
+
+ 16. На веб интерфейсе создать файл bug_report.json.
+ ...
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ ...
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+ ...
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ ...
+ 20. Синхронизировать внешний и локальный репозиторий JSON
+ main@MacBook-Pro JSON % git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.91 KiB | 392.00 KiB/s, done.
+From https://github.com/8888Dima8888/JSON
+   6c68ace..30cd45f  main       -> origin/main
+Updating 6c68ace..30cd45f
+Fast-forward
+ bug_report.json. | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 bug_report.json.
+main@MacBook-Pro JSON % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+main@MacBook-Pro JSON % 
+
+!!!!! Ниже ренейм файла bug_report.json. в bug_report.json
+
+main@MacBook-Pro JSON % git mv bug_report.json. bug_report.json 
+main@MacBook-Pro JSON % git commit
+[main 47c184f] rename
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename bug_report.json. => bug_report.json (100%)
+main@MacBook-Pro JSON % git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 222 bytes | 222.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/8888Dima8888/JSON.git
+   4a58281..47c184f  main -> main
+main@MacBook-Pro JSON % 
+
+
+
+
+
+
+XML
+ 21. Создать внешний репозиторий c названием XML.
+ ...
+ 22. Клонировать репозиторий XML на локальный компьютер.
+ main@MacBook-Pro GitHab % git clone https://github.com/8888Dima8888/XML.git
+Cloning into 'XML'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+main@MacBook-Pro GitHab % 
+
+ 23. Внутри локального XML создать файл “new.xml”.
+main@MacBook-Pro XML % cat > new.xml
+^C
+main@MacBook-Pro XML % 
+
+ 24. Добавить файл под гит.
+ main@MacBook-Pro XML % git add new.xml
+main@MacBook-Pro XML % 
+ 
+ 25. Закоммитить файл.
+ main@MacBook-Pro XML % git commit -m "first commit"
+[main 8cda5e5] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.xml
+main@MacBook-Pro XML % 
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+ main@MacBook-Pro XML % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/XML.git
+   2517628..8cda5e5  main -> main
+main@MacBook-Pro XML % 
+
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+main@MacBook-Pro XML % open new.xml
+....
+
+ 28. Отправить изменения на внешний репозиторий.
+ main@MacBook-Pro XML % git add new.xml 
+main@MacBook-Pro XML % git commit -m "first xml"
+[main 0a1014a] first xml
+ 1 file changed, 13 insertions(+)
+main@MacBook-Pro XML % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 449 bytes | 449.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/XML.git
+   8cda5e5..0a1014a  main -> main
+main@MacBook-Pro XML % 
+
+ 29. Создать файл preferences.xml
+ main@MacBook-Pro XML % cat > preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+ main@MacBook-Pro XML % open preferences.xml
+ main@MacBook-Pro XML % cat preferences.xml
+<?xml version="1.0"?>
+<Любимый фильм>
+   Хранители
+   </Любимый фильм>
+<Любимый сериал>
+    Экспансия
+  </Любимый сериал>
+<Любимая еда>
+    Вкусная
+  </Любимая еда>
+<Любимое время года>
+    Весь год
+  </Любимое время года>
+<Страна, которую хотели бы посетить>
+  Новая Зеландия
+   </Страна, которую хотели бы посетить>
+main@MacBook-Pro XML % 
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ main@MacBook-Pro XML % cat > skills.xml
+ main@MacBook-Pro XML % open skills.xml
+main@MacBook-Pro XML % cat skills.xml
+<?xml version="1.0"?>
+<skills>
+    1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+    2. Что такое клиент-серверная архитектура.
+    3. HTTP Методы запросов на сервер.
+    4. Коды ответов HTTP сервера.
+    5. Структуры HTTP запросов и ответов.
+    6. Что такое JSON, XML. Их структура.
+    7. Тестирование API через Postman (JS, автотесты API).
+    8. Снятие и чтение логов c внешнего сервера.
+    9. Снифинг http web трафика через Charles и Fiddler.
+    10. Dev Tools веб браузеров (Google Chrome, FireFox).
+    11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)
+    12. Мобильное тестирование.
+    13. Осость iOS, Android, гайдлайны.
+    14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)
+    15. Сборка Android приложений на Android Studio.
+    16. ADB (управление андройд девайсами).
+    17. Настройка прокси и vpn на iOS и Android.
+    18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.
+    19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)
+    20. Основы bash скриптинг, автоматизация рутинных задач на сервере.
+    21. Доступ к удалённым серверам.
+    22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).
+    23. База данных Postgres (установка, настройка и использование).
+    24. Нереляционная база данных Redis (установка, настройка и использование).
+    25. Нагрузочное тестирование в Jmeter.
+    26. Методология разработки Scrum.
+    27. Техники тест-дизайна (Классы эквивалентности, граничные значения, комбинаторные техники (Попарный, ортогональный, базовый выбор, каждый выбор), состояния и переходы)
+    28. Python. (Изучение основ. Создание клиент серверного приложения)
+</skills>
+main@MacBook-Pro XML % 
+
+
+
+ 32. Сделать коммит в одну строку.
+#(!команда git commit -am не пройдет, т.к. файлы еще не были добавлены для отслеживания командой git add)# 
+ main@MacBook-Pro XML % git add .
+main@MacBook-Pro XML % git commit -m "preferences&&skils"  
+[main 7bed280] preferences&&skils
+ 2 files changed, 48 insertions(+)
+ create mode 100644 preferences.xml
+ create mode 100644 skills.xml
+main@MacBook-Pro XML % 
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+ main@MacBook-Pro XML % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.83 KiB | 1.83 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/XML.git
+   0a1014a..7bed280  main -> main
+main@MacBook-Pro XML % 
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+ ...
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ ...
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+ ...
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ ...
+ 38. Синхронизировать внешний и локальный репозиторий XML
+ main@MacBook-Pro XML % git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.96 KiB | 402.00 KiB/s, done.
+From https://github.com/8888Dima8888/XML
+   7bed280..37342b7  main       -> origin/main
+Updating 7bed280..37342b7
+Fast-forward
+ bug_report.xml | 43 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 43 insertions(+)
+ create mode 100644 bug_report.xml
+main@MacBook-Pro XML % 
+main@MacBook-Pro XML % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+main@MacBook-Pro XML % 

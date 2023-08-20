@@ -1,0 +1,229 @@
+Первая часть первого  ДЗ  ))
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+main@MacBook-Pro ~ % pwd
+/Users/main
+main@MacBook-Pro ~ % 
+
+2) Создать папку
+main@MacBook-Pro ~ % mkdir HW1.1
+main@MacBook-Pro ~ % 
+
+3) Зайти в папку
+main@MacBook-Pro ~ % cd HW1.1
+main@MacBook-Pro HW1.1 % 
+
+4) Создать 3 папки
+main@MacBook-Pro HW1.1 % mkdir 1 2 3
+main@MacBook-Pro HW1.1 % 
+
+5) Зайти в любоую папку
+main@MacBook-Pro HW1.1 % cd 1
+main@MacBook-Pro 1 % 
+
+
+6) Создать 5 файлов (3 txt, 2 json)
+main@MacBook-Pro 1 % touch ave.txt 2.txt 3.txt 1.json 2.json
+main@MacBook-Pro 1 % 
+
+
+7) Создать 3 папки
+main@MacBook-Pro 1 % mkdir 1.1 2.2 3.3
+main@MacBook-Pro 1 % 
+
+
+8. Вывести список содержимого папки
+main@MacBook-Pro 1 % ls -la
+total 0
+drwxr-xr-x  10 main  staff  320 10 авг 23:53 .
+drwxr-xr-x   5 main  staff  160 10 авг 23:51 ..
+drwxr-xr-x   2 main  staff   64 10 авг 23:53 1.1
+-rw-r--r--   1 main  staff    0 10 авг 23:52 1.json
+drwxr-xr-x   2 main  staff   64 10 авг 23:53 2.2
+-rw-r--r--   1 main  staff    0 10 авг 23:52 2.json
+-rw-r--r--   1 main  staff    0 10 авг 23:52 2.txt
+drwxr-xr-x   2 main  staff   64 10 авг 23:53 3.3
+-rw-r--r--   1 main  staff    0 10 авг 23:52 3.txt
+-rw-r--r--   1 main  staff    0 10 авг 23:52 ave.txt
+main@MacBook-Pro 1 % 
+
+9) + Открыть любой txt файл
+10) + написать туда что-нибудь, любой текст.
+11) + сохранить и выйти.
+main@MacBook-Pro 1 % cat > ave.txt
+skjncjncenronoinoinno
+wncence coweicmwmcokmceo
+kjenoejrneonceo
+kwjncencoewnc
+ave 
+njry
+mmmmmm^D
+^C
+main@MacBook-Pro 1 % 
+
+12) Выйти из папки на уровень выше
+main@MacBook-Pro 1 % cd ..
+main@MacBook-Pro HW1.1 % 
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+main@MacBook-Pro HW1.1 % mv /Users/main/HW1.1/1/1.json /Users/main/HW1.1/1/3.txt /Users/main/HW1.1/1/1.1 
+main@MacBook-Pro HW1.1 % cd 1/1.1
+main@MacBook-Pro 1.1 % ls -la
+total 0
+drwxr-xr-x  4 main  staff  128 10 авг 23:58 .
+drwxr-xr-x  8 main  staff  256 10 авг 23:58 ..
+-rw-r--r--  1 main  staff    0 10 авг 23:52 1.json
+-rw-r--r--  1 main  staff    0 10 авг 23:52 3.txt
+main@MacBook-Pro 1.1 % 
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+main@MacBook-Pro 1.1 % cp ./1.json 3.txt ../2.2/
+main@MacBook-Pro 1.1 % cd ../2.2
+main@MacBook-Pro 2.2 % ls -la
+total 0
+drwxr-xr-x  4 main  staff  128 11 авг 00:01 .
+drwxr-xr-x  8 main  staff  256 10 авг 23:58 ..
+-rw-r--r--  1 main  staff    0 11 авг 00:01 1.json
+-rw-r--r--  1 main  staff    0 11 авг 00:01 3.txt
+main@MacBook-Pro 2.2 % 
+
+15) Найти файл по имени
+main@MacBook-Pro ~ % mdfind -name ave.txt
+/Users/main/HW1.1/1/ave.txt
+main@MacBook-Pro ~ % 
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+main@MacBook-Pro 1 % tail -f | grep -in ave ave.txt
+5:ave 
+_
+
+
+
+17) вывести несколько первых строк из текстового файла
+main@MacBook-Pro 1 % head -3 ave.txt
+skjncjncenronoinoinno
+wncence coweicmwmcokmceo
+kjenoejrneonceo
+main@MacBook-Pro 1 % 
+
+18) вывести несколько последних строк из текстового файла
+main@MacBook-Pro 1 % tail -3 ave.txt
+njry
+sssssss
+mmmmmm
+main@MacBook-Pro 1 % 
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+main@MacBook-Pro 1 % less 2.txt
+Живущие на светлом Олимпе бессмертные боги первый род людской создали сча
+стливым; это был золотой век. Бог Крон правил тогда на небе. Как блаженны
+е боги, жили в те времена люди, не зная ни заботы, ни труда, ни печали. Н
+е знали они и немощной старости; всегда были сильны и крепки их ноги и ру
+ки. Безболезненная я счастливая жизнь их была вечным пиром. Смерть, насту
+павшая после долгой их жизни, похожа была на спокойный, тихий сон. Они им
+ели при жизни все в изобилии. Земля сама давала им богатые плоды, и не пр
+иходилось им тратить труд на возделывание полей и садов. Многочисленны бы
+ли их стада, и спокойно паслись они на тучных пастбищах. Безмятежно жили 
+люди золотого века. Сами боги приходили к ним советоваться. Но золотой ве
+к на земле кончился, и никого не осталось из людей этого поколения. После
+ смерти люди золотом века стали духами, покровителями людей новых поколен
+ий. Окутанные туманом, они носятся по всей земле, защищая правду и карая 
+зло. Так наградил их Зевс после их смерти.
+
+Второй людской род и второй век уже не были такими счастливыми, как первы
+й. Это был серебряный век. Не были равны ни силой, ни разумом люди серебр
+яного века людям золотого. Сто лет росли они неразумными в домах своих ма
+терей, только возмужав, покидали они их. Коротка была их жизнь в зрелом в
+озрасте, а так как они были неразумны, то много несчастий и горя видели о
+ни в жизни. Непокорны были люди серебряного века. Они не повиновались бес
+смертным богам и не хотели сжигать им жертвы на алтарях, Великий сын Крон
+а Зевс уничтожил род их на земле. Он разгневался на них за то, что не пов
+:
+
+20) вывести дату и время
+main@MacBook-Pro 1 % date
+воскресенье, 13 августа 2023 г. 14:36:52 (CEST)
+main@MacBook-Pro 1 % 
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5006/terminal-hw-request
+main@MacBook-Pro 1 % curl http://162.55.220.72:5006/terminal-hw-request
+{
+  "Intro": "Hello!! This is your the first response from server", 
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)", 
+    "result": [
+      "Your_String", 
+      "Your_number"
+    ]
+  }
+}
+main@MacBook-Pro 1 % curl "http://162.55.220.72:5005/get_method?name=(Dima)&age=(32)"         
+[
+  "(Dima)", 
+  "(32)"
+]
+main@MacBook-Pro 1 % 
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+#!/bin/bash
+echo "Зайти в папку: cd HW1.1"
+cd HW1.1
+echo "Создать 3 папки: mkdir 1 2 3"
+mkdir 1 2 3
+echo "Зайти в папку: cd 1"
+cd 1
+echo "Создать 5 файлов (3 txt, 2 json: touch 1.txt 2.txt 3.txt 1.json 2.json)"
+touch 1.txt 2.txt 3.txt 1.json 2.json
+echo "Создать 3 папки: mkdir 1.1 2.2 3.3 "
+mkdir 1.1 2.2 3.3
+echo "Вывести список содержимого папки: ls -la"
+ls -la
+echo "переместить любые 2 файла, которые вы создали, в любую другую папку: mv 1.txt 2.txt 2.2/"
+mv 1.txt 2.txt 2.2/
+echo "Вывести список содержимого папки: ls -la"
+ls -la
+echo "Перейти в папку 2.2, показать ее содержимое: cd HW1.1/1/2.2; ls -la"
+cd 2.2/
+ls -la
+=====================
+main@MacBook-Pro ~ % bash /Users/main/skript1.sh 
+Зайти в папку: cd HW1.1
+Создать 3 папки: mkdir 1 2 3
+Зайти в папку: cd 1
+Создать 5 файлов (3 txt, 2 json: touch 1.txt 2.txt 3.txt 1.json 2.json)
+Создать 3 папки: mkdir 1.1 2.2 3.3 
+Вывести список содержимого папки: ls -la
+total 0
+drwxr-xr-x  10 main  staff  320 13 авг 15:14 .
+drwxr-xr-x   6 main  staff  192 13 авг 15:14 ..
+drwxr-xr-x   2 main  staff   64 13 авг 15:14 1.1
+-rw-r--r--   1 main  staff    0 13 авг 15:14 1.json
+-rw-r--r--   1 main  staff    0 13 авг 15:14 1.txt
+drwxr-xr-x   2 main  staff   64 13 авг 15:14 2.2
+-rw-r--r--   1 main  staff    0 13 авг 15:14 2.json
+-rw-r--r--   1 main  staff    0 13 авг 15:14 2.txt
+drwxr-xr-x   2 main  staff   64 13 авг 15:14 3.3
+-rw-r--r--   1 main  staff    0 13 авг 15:14 3.txt
+Переместить любые 2 файла, которые вы создали, в любую другую папку: mv 1.txt 2.txt 2.2/
+Вывести список содержимого папки: ls -la
+total 0
+drwxr-xr-x  8 main  staff  256 13 авг 15:14 .
+drwxr-xr-x  6 main  staff  192 13 авг 15:14 ..
+drwxr-xr-x  2 main  staff   64 13 авг 15:14 1.1
+-rw-r--r--  1 main  staff    0 13 авг 15:14 1.json
+drwxr-xr-x  4 main  staff  128 13 авг 15:14 2.2
+-rw-r--r--  1 main  staff    0 13 авг 15:14 2.json
+drwxr-xr-x  2 main  staff   64 13 авг 15:14 3.3
+-rw-r--r--  1 main  staff    0 13 авг 15:14 3.txt
+Перейти в папку 2.2, показать ее содержимое: cd HW1.1/1/2.2; ls -la
+total 0
+drwxr-xr-x  4 main  staff  128 13 авг 15:14 .
+drwxr-xr-x  8 main  staff  256 13 авг 15:14 ..
+-rw-r--r--  1 main  staff    0 13 авг 15:14 1.txt
+-rw-r--r--  1 main  staff    0 13 авг 15:14 2.txt
+main@MacBook-Pro ~ % 

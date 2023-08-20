@@ -1,0 +1,155 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+main@MacBook-Pro GitHab % git init HW2GIT
+Initialized empty Git repository in /Users/main/QA36/GitHab/HW2GIT/.git/
+main@MacBook-Pro GitHab % cd HW2GIT
+main@MacBook-Pro HW2GIT % cat > start.txt
+^C
+main@MacBook-Pro HW2GIT % git add .
+main@MacBook-Pro HW2GIT % git commit
+[master (root-commit) 8477f86] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 start.txt
+main@MacBook-Pro HW2GIT % git branch --move master main
+main@MacBook-Pro HW2GIT % git branch
+* main
+main@MacBook-Pro HW2GIT % git branch Postman
+main@MacBook-Pro HW2GIT % git branch Jmeter 
+main@MacBook-Pro HW2GIT % git branch Checklist
+main@MacBook-Pro HW2GIT % git branch Bag_Reports
+main@MacBook-Pro HW2GIT % git branch SQL         
+main@MacBook-Pro HW2GIT % git branch Charles
+main@MacBook-Pro HW2GIT % git branch Mobil_testing
+main@MacBook-Pro HW2GIT % git branch
+  Bag_Reports
+  Charles
+  Checklist
+  Jmeter
+  Mobil_testing
+  Postman
+  SQL
+* main
+main@MacBook-Pro HW2GIT % 
+
+2. Запушить все ветки на внешний репозиторий
+main@MacBook-Pro HW2GIT % git remote add origin https://github.com/8888Dima8888/HW2GIT.git
+main@MacBook-Pro HW2GIT % git remote -v                                        
+origin	https://github.com/8888Dima8888/HW2GIT.git (fetch)
+origin	https://github.com/8888Dima8888/HW2GIT.git (push)
+main@MacBook-Pro HW2GIT % git push origin --all
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/HW2GIT.git
+ * [new branch]      Bag_Reports -> Bag_Reports
+ * [new branch]      Charles -> Charles
+ * [new branch]      Checklist -> Checklist
+ * [new branch]      Jmeter -> Jmeter
+ * [new branch]      Mobil_testing -> Mobil_testing
+ * [new branch]      Postman -> Postman
+ * [new branch]      SQL -> SQL
+ * [new branch]      main -> main
+main@MacBook-Pro HW2GIT % 
+
+
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+main@MacBook-Pro HW2GIT % git checkout Bag_Reports
+Switched to branch 'Bag_Reports'
+main@MacBook-Pro HW2GIT % cat > структура_bag_report.txt
+^C
+main@MacBook-Pro HW2GIT % open структура_bag_report.txt
+main@MacBook-Pro HW2GIT % git add .
+main@MacBook-Pro HW2GIT % git commit
+[Bag_Reports d0ad72f] srtbagrep
+ 1 file changed, 13 insertions(+)
+ create mode 100644 "\321\201\321\202\321\200\321\203\320\272\321\202\321\203\321\200\320\260_bag_report.txt"
+main@MacBook-Pro HW2GIT %
+
+4. Запушить структуру багрепорта на внешний репозиторий
+main@MacBook-Pro HW2GIT % git push -u origin Bag_Reports
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 963 bytes | 963.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/HW2GIT.git
+   8477f86..d0ad72f  Bag_Reports -> Bag_Reports
+Branch 'Bag_Reports' set up to track remote branch 'Bag_Reports' from 'origin'.
+main@MacBook-Pro HW2GIT % 
+
+5. Вмержить ветку Bag Reports в Main
+main@MacBook-Pro HW2GIT % git merge Bag_Reports
+Updating 8477f86..d0ad72f
+Fast-forward
+ ...\320\272\321\202\321\203\321\200\320\260_bag_report.txt" | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 "\321\201\321\202\321\200\321\203\320\272\321\202\321\203\321\200\320\260_bag_report.txt"
+main@MacBook-Pro HW2GIT % 
+
+6. Запушить main на внешний репозиторий.
+main@MacBook-Pro HW2GIT % git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/HW2GIT.git
+   8477f86..d0ad72f  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+main@MacBook-Pro HW2GIT % 
+
+7. В ветке CheckLists набросать структуру чек листа.
+main@MacBook-Pro HW2GIT % git checkout Checklist
+Switched to branch 'Checklist'
+main@MacBook-Pro HW2GIT % cat > Checklist.txt
+^C
+main@MacBook-Pro HW2GIT % open Checklist.txt 
+main@MacBook-Pro HW2GIT % 
+
+8. Запушить структуру на внешний репозиторий
+main@MacBook-Pro HW2GIT % git add .
+main@MacBook-Pro HW2GIT % git commit
+[Checklist 7492417] strChecklist
+ 1 file changed, 66 insertions(+)
+ create mode 100644 Checklist.txt
+main@MacBook-Pro HW2GIT % 
+main@MacBook-Pro HW2GIT % git push -u origin Checklist
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.24 KiB | 1.24 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/HW2GIT.git
+   8477f86..7492417  Checklist -> Checklist
+Branch 'Checklist' set up to track remote branch 'Checklist' from 'origin'.
+main@MacBook-Pro HW2GIT % 
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+...
+10. Синхронизировать Внешнюю и Локальную ветки Main
+main@MacBook-Pro HW2GIT % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+main@MacBook-Pro HW2GIT % git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 757 bytes | 378.00 KiB/s, done.
+From https://github.com/8888Dima8888/HW2GIT
+   d0ad72f..adfdc52  main       -> origin/main
+main@MacBook-Pro HW2GIT % git pull
+Updating d0ad72f..adfdc52
+Fast-forward
+ Checklist.txt | 66 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 66 insertions(+)
+ create mode 100644 Checklist.txt
+main@MacBook-Pro HW2GIT % 

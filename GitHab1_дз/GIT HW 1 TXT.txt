@@ -1,0 +1,234 @@
+GIT Homework 1
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT.
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+ main@MacBook-Pro GitHab % git clone https://github.com/8888Dima8888/TXT.git
+Cloning into 'TXT'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+main@MacBook-Pro GitHab % 
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+main@MacBook-Pro GitHab % cd TXT
+main@MacBook-Pro TXT % cat > new.txt
+^C
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+main@MacBook-Pro TXT % 
+
+ 4. Добавить файл под гит.
+ main@MacBook-Pro TXT % git add new.txt
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   new.txt
+
+main@MacBook-Pro TXT % 
+
+ 5. Закоммитить файл.
+ main@MacBook-Pro TXT % git commit -m "first commit"
+[main 1119679] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+main@MacBook-Pro TXT % 
+ 
+ 6. Отправить файл на внешний GitHub репозиторий.
+ main@MacBook-Pro TXT % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/TXT.git
+   ecf93cb..1119679  main -> main
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+main@MacBook-Pro TXT % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/TXT.git
+   ecf93cb..1119679  main -> main
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+main@MacBook-Pro TXT % 
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+main@MacBook-Pro TXT % cat > new.txt
+ФИО: Иванов Иван Иванович
+Возраст: 32       
+Количество домашних животных: 0
+Будующая желаемая зарплата: камни бесконечности
+^C
+main@MacBook-Pro TXT % cat new.txt
+ФИО: Иванов Иван Иванович
+Возраст: 32       
+Количество домашних животных: 0
+Будующая желаемая зарплата: камни бесконечности
+main@MacBook-Pro TXT % 
+
+ 8. Отправить изменения на внешний репозиторий.
+ main@MacBook-Pro TXT % git add new.txt
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   new.txt
+
+main@MacBook-Pro TXT % git commit -m "first changes"
+[main a671478] first changes
+ 1 file changed, 4 insertions(+)
+main@MacBook-Pro TXT % 
+main@MacBook-Pro TXT % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 426.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/TXT.git
+   1119679..a671478  main -> main
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+main@MacBook-Pro TXT % 
+
+ 9. Создать файл preferences.txt
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+ main@MacBook-Pro TXT % cat > preferences.txt
+Любимый фильм: Хранители
+Любимый сериал: Пространство 
+Любимая еда: Вкусная           
+Любимое время года: весь год 
+Страна, которую хотел бы посетить: Новая Зеландия
+^C
+main@MacBook-Pro TXT %
+
+ 11. Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+ main@MacBook-Pro TXT % cat > skills.txt
+1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+2. Что такое клиент-серверная архитектура.
+3. HTTP Методы запросов на сервер.
+4. Коды ответов HTTP сервера.
+5. Структуры HTTP запросов и ответов.
+6. Что такое JSON, XML. Их структура.
+7. Тестирование API через Postman (JS, автотесты API).
+8. Снятие и чтение логов c внешнего сервера.
+9. Снифинг http web трафика через Charles и Fiddler.
+10. Dev Tools веб браузеров (Google Chrome, FireFox).
+11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)
+12. Мобильное тестирование.
+13. Осость iOS, Android, гайдлайны.
+14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)
+15. Сборка Android приложений на Android Studio.
+16. ADB (управление андройд девайсами).
+17. Настройка прокси и vpn на iOS и Android.
+18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.
+19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)
+20. Основы bash скриптинг, автоматизация рутинных задач на сервере.
+21. Доступ к удалённым серверам.
+22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).
+23. База данных Postgres (установка, настройка и использование).
+24. Нереляционная база данных Redis (установка, настройка и использование).
+25. Нагрузочное тестирование в Jmeter.
+26. Методология разработки Scrum.
+27. Техники тест-дизайна (Классы эквивалентности, граничные значения, комбинаторные техники (Попарный, ортогональный, базовый выбор, каждый выбор), состояния и переходы)
+28. Python. (Изучение основ. Создание клиент серверного приложения)
+^C
+main@MacBook-Pro TXT % 
+
+
+ 12. Сделать коммит в одну строку.
+ main@MacBook-Pro TXT % git add .; git commit -m "preferences&&skills"
+#(!команда git commit -am не пройдет, т.к. файлы еще не были добавлены для отслеживания командой git add)# 
+[main 630e6b3] preferences&&skills
+ 2 files changed, 33 insertions(+)
+ create mode 100644 preferences.txt
+ create mode 100644 skills.txt
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+main@MacBook-Pro TXT % 
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+ main@MacBook-Pro TXT % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.73 KiB | 1.73 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/8888Dima8888/TXT.git
+   a671478..630e6b3  main -> main
+main@MacBook-Pro TXT % 
+
+ 14. На веб интерфейсе создать файл bug_report.txt.
+ ...
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ ...
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ ...
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+ main@MacBook-Pro TXT % git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 671 bytes | 223.00 KiB/s, done.
+From https://github.com/8888Dima8888/TXT
+   bf4e4d5..c8fc000  main       -> origin/main
+main@MacBook-Pro TXT % 
+
+main@MacBook-Pro TXT % git pull
+Updating 630e6b3..c8fc000
+Fast-forward
+ bug_report.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bug_report.txt
+main@MacBook-Pro TXT % 
+main@MacBook-Pro TXT % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+main@MacBook-Pro TXT % 
+
